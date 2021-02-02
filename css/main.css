@@ -16,7 +16,7 @@ body {
 	align-items: center;
 	flex-flow: wrap;
 	width: 90%;
-	margin: 0 auto;
+	max-width: 1200px;
 }
 
 h1,
@@ -33,35 +33,40 @@ h2 {
 	font-size: 1.2em;
 }
 h3 {
-	font-size: 0.4em;
+	font-size: 0.75em;
 }
 
 p {
-	font-size: 0.8em;
+	font-size: 0.87em;
 	line-height: 21px;
   padding: 0 30px;
 }
 
+ul {
+	margin: 0;
+}
+
 /*The widths are in a percentage!*/
 header {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: wrap;
-	margin: 0 auto;
+	flex-flow: row wrap;
 }
 
 header h1 {
 	margin: 0;
-	padding-top: 30px;
-	padding-bottom: 5px;
+	padding: 38px 20px 20px 20px;
 	border-bottom: 3px solid #77a466;
+	width: 100%;
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
+	padding: 20px 0;
 	width: 100%;
 }
 header nav ul {
@@ -87,21 +92,16 @@ header nav ul li a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: wrap;
-	margin: 0;
+	flex-flow: row wrap;
 }
 
 .main-image {
-	height: auto;
+	width: 100%;
 }
 .main-image img {
 	width: 100%;
-
 }
 
-.main-title {
-	height: auto;
-}
 .main-title h2 {
 	text-align: left;
 	padding: 5px 0;
@@ -110,7 +110,7 @@ header nav ul li a{
 .main-title p {
 	padding: 0;
 	font-size: 1em;
-	line-height: 25px;
+	line-height: 1.5625;
 }
 
 .section-one,
@@ -120,8 +120,6 @@ header nav ul li a{
 	width: 100%;
 }
 
-
-
 .section-two {
 	border-left: 2px solid #eee;
 	border-right: 2px solid #eee;
@@ -130,13 +128,13 @@ header nav ul li a{
 .section-one h3,
 .section-two h3,
 .section-three h3 {
-	padding: 10px 30px;
+	width: 100%
 }
 
 .menu {
 	font-size: 1em;
 	list-style: none;
-	padding: 0 30px;;
+	padding: 0;
 }
 .menu li {
 	padding: 10px 0;
@@ -146,13 +144,12 @@ header nav ul li a{
 .reviews {
 	color: #333;
 	font-size: 1em;
-	line-height: 21px;
+	line-height: 1.3125;
 }
 
 .address {
 	font-size: 1em;
-	line-height: 21px;
-	text-align: left;
+	line-height: 1.5;
 }
 
 /*The widths are in a percentage!*/
@@ -160,7 +157,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: wrap;
+	flex-flow: row wrap;
 	border-top: 3px solid #eee;
 	margin: 0 auto;
 	clear: both;
@@ -170,5 +167,56 @@ footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: 0.8em;
+	font-size: 0.875em;
+}
+
+@media all and (min-width:768px) {
+	/*Tablet styles here*/
+
+header {
+	text-align: center;
+}
+	.bottom-section {
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		flex-basis: 30%;
+		border-top: 2px solid #eee;
+	}
+
+	.section-two {
+			border-left: 1px solid #eee;
+			border-right: 1px solid #eee;
+			padding: 0 20px;
+	}
+
+
+}
+
+@media all and (min-width:1200px) {
+	/*Desktop styles here*/
+	header {
+		justify-content: space-between;
+
+	}
+
+	header h1 {
+		width: 50%;
+		padding: 0;
+		text-align: left;
+		border-bottom: none;
+	}
+
+	header nav {
+			width: 40%;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+
 }
