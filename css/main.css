@@ -116,7 +116,6 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	border-top: 2px solid #eee;
 	width: 100%;
 }
 
@@ -179,19 +178,21 @@ header {
 	.bottom-section {
 		justify-content: space-between;
 		align-items: flex-start;
+		border-top: 3px solid #eee;
 	}
 
 	.section-one,
 	.section-two,
 	.section-three {
 		flex-basis: 30%;
-		border-top: 2px solid #eee;
+
 	}
 
 	.section-two {
 			border-left: 1px solid #eee;
 			border-right: 1px solid #eee;
 			padding: 0 20px;
+			flex-grow: 10;
 	}
 
 
